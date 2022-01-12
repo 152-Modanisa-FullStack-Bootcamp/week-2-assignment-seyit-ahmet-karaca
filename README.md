@@ -1,6 +1,7 @@
 # Bootcamp Week 2 Assignment
 
-![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Screenshots of the requested assignments are attached below.
+![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) Screenshots of the requested assignments are attached below.</br>
+![#00A651](https://via.placeholder.com/15/00A651/000000?text=+) vuex feature is accessible in feature/vuex branch ( `git checkout feature/vuex` ) .</br>
 
 There are 3 pages you need to design: main, favorite and watch page respectively. You need to use router for displaying the pages. When user clicks to the favorite button, you should
 use "bootcamp" as param.
