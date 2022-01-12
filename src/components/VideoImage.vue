@@ -10,6 +10,9 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex';
+import {mapState} from 'vuex';
+
 export default {
   name: "VideoImage",
   components: {},
@@ -29,8 +32,10 @@ export default {
   methods: {
     addFavorite() {
       this.isFavorite = !this.isFavorite;
-      this.$emit("addFavorite", this.video.id);
-    }
+      this.manageFavoriteVideoIds(this.video.id);
+    },
+    ...mapMutations(["manageFavoriteVideoIds"]),
+    ...mapState(["favoriteVideoIds"]),
   },
   computed: {
     coverImageChange() {
@@ -40,6 +45,10 @@ export default {
         return this.video.hoverImage;
       }
     }
+  },
+  mounted() {
+    this.isFavorite = this.favoriteVideoIds().includes(this.video.id);
+
   }
 }
 </script>

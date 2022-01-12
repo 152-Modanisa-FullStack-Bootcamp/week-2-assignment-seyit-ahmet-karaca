@@ -1,6 +1,6 @@
 <template>
   <div class="video-card">
-    <video-image :video="video" :isListing=true @addFavorite="addFavorite"></video-image>
+    <video-image :video="video" :isListing=true></video-image>
     <div class="video-details">
       <img :src="video.ownerImage" alt="" class="owner-image">
       <div class="owner-information">
@@ -28,14 +28,6 @@ export default {
   components: {
     VideoImage
   },
-  data() {
-    return {}
-  },
-  methods: {
-    addFavorite(videoId) {
-      this.$emit("addFavorite", videoId);
-    }
-  }
 }
 </script>
 

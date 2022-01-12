@@ -18,12 +18,7 @@ export default {
   },
   methods: {
     navigateFavorites() {
-      const route = {name: "favorites", params: {"userid": this.userId}};
-      if (this.favorites !== undefined && this.favorites.length !== 0) {
-        const favIds = this.favorites.reduce((prev, current) => prev + "," + current);
-        route.query = {fav: favIds}
-      }
-      this.$router.push(route);
+      this.$router.push({name: "favorites", params: {"userid": this.userId}});
     }
   }
 }
